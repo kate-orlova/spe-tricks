@@ -7,7 +7,7 @@
 
 #  Sitecore PowerShell Extensions Tricks
  Sitecore PowerShell Extensions (SPE) tricks are a set of useful PowerShell scripts everyone working with Sitecore should have at hand.
- 
+ Scripts are grouped into folders based on the specific functionality:
  * CRUD
     * delete an unwanted item with its child items permanently;
  
