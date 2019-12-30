@@ -9,6 +9,7 @@
  Scripts are grouped into folders based on the specific functionality:
  * CRUD
     * delete an unwanted item with its child items permanently;
+    * move a certain item to another location;
  
 # Contribution
 Hope you found these PowerShell scripts helpful, your contributions and suggestions will be very much appreciated. Please submit a pull request.
