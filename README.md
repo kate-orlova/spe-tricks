@@ -10,7 +10,7 @@
  * CRUD
     * delete an unwanted item with its child items permanently;
     * move a certain item to another location;
-    * copy an item;
+    * copy a certain item to a new destination;
     * create a new item based on a certain data template in a specific destination;
  
 # Contribution
