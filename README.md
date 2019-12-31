@@ -11,6 +11,7 @@
     * delete an unwanted item with its child items permanently;
     * move a certain item to another location;
     * copy an item;
+    * create a new item based on a certain data template in a specific destination;
  
 # Contribution
 Hope you found these PowerShell scripts helpful, your contributions and suggestions will be very much appreciated. Please submit a pull request.
