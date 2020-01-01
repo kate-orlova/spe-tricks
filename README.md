@@ -9,9 +9,11 @@
  Scripts are grouped into folders based on the specific functionality:
  * CRUD
     * delete an unwanted item with its child items permanently;
+    * delete child items under a specific path;
     * move a certain item to another location;
     * copy a certain item to a new destination;
     * create a new item based on a certain data template in a specific destination;
+
  
 # Contribution
 Hope you found these PowerShell scripts helpful, your contributions and suggestions will be very much appreciated. Please submit a pull request.
