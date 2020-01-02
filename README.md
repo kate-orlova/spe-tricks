@@ -3,15 +3,18 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/kate-orlova/spe-tricks.svg?style=flat)
 ![GitHub repo size](https://img.shields.io/github/repo-size/kate-orlova/spe-tricks.svg?style=flat)
 ![GitHub contributors](https://img.shields.io/github/contributors/kate-orlova/spe-tricks)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/kate-orlova/spe-tricks)
 
 #  Sitecore PowerShell Extensions Tricks
  Sitecore PowerShell Extensions (SPE) tricks are a set of useful PowerShell scripts everyone working with Sitecore should have at hand.
  Scripts are grouped into folders based on the specific functionality:
  * CRUD
     * delete an unwanted item with its child items permanently;
+    * delete child items under a specific path;
     * move a certain item to another location;
     * copy a certain item to a new destination;
     * create a new item based on a certain data template in a specific destination;
+
  
 # Contribution
 Hope you found these PowerShell scripts helpful, your contributions and suggestions will be very much appreciated. Please submit a pull request.
