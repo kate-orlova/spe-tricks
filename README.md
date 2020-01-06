@@ -18,7 +18,7 @@
     * create a new item based on a certain data template in a specific destination;
   * Publish
     * publish child items;
-    * publish child items based on a specific data template;
+    * publish child items based on a specific data template name / Id;
 
  
 # Contribution
