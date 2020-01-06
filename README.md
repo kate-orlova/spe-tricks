@@ -18,6 +18,7 @@
     * create a new item based on a certain data template in a specific destination;
   * Language
     * add a language version to child items;
+    * add a language version based on a specific data template;
   * Publish
     * publish child items;
     * publish child items based on a specific data template name / Id;
