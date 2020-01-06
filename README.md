@@ -16,6 +16,8 @@
     * copy child items to a certain folder;
     * copy child items based on a specific data template to a certain folder;
     * create a new item based on a certain data template in a specific destination;
+  * Language
+    * add a language version to child items;
   * Publish
     * publish child items;
     * publish child items based on a specific data template name / Id;
