@@ -16,6 +16,7 @@
     * copy child items to a certain folder;
     * copy child items based on a specific data template to a certain folder;
     * create a new item based on a certain data template in a specific destination;
+    * convert items from one data template to another;
   * Language
     * add a language version to child items;
     * add a language version based on a specific data template;
