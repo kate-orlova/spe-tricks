@@ -12,6 +12,7 @@ if ($items)
 	$items | ForEach-Object {
         $metaTitle = $_["MetaTitle"]
 		$metaDescription = $_["MetaDescription"]
+		$metaKeywords = $_["MetaKeywords"]
 		
 		Unlock-Item -Item $_
         Remove-ItemLanguage -Item $_ -Language "en-GB"
@@ -20,6 +21,7 @@ if ($items)
 		$_.Editing.BeginEdit()
 		$_["MetaTitle"] = $metaTitle
 		$_["MetaDescription"] = $metaDescription
+		$_["MetaKeywords"] = $metaKeywords
 		$_.Editing.EndEdit()
 	}
     Write-Host "Finished"
