@@ -11,6 +11,7 @@ if ($items)
 	Write-Host "Converting $($items.Length) item(s) to '$($targetTemplate)'"
 	$items | ForEach-Object {
         $metaTitle = $_["MetaTitle"]
+		$metaDescription = $_["MetaDescription"]
 		
 		Unlock-Item -Item $_
         Remove-ItemLanguage -Item $_ -Language "en-GB"
@@ -18,6 +19,7 @@ if ($items)
 		
 		$_.Editing.BeginEdit()
 		$_["MetaTitle"] = $metaTitle
+		$_["MetaDescription"] = $metaDescription
 		$_.Editing.EndEdit()
 	}
     Write-Host "Finished"
