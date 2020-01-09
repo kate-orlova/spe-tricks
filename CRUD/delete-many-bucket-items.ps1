@@ -3,4 +3,6 @@ try {
 	$buckets | Remove-Item
 }
 finally {
+	$bulk.Dispose()
+	Write-Host "Finished"
 }
