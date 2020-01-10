@@ -1,4 +1,5 @@
 $targetPath = "master:\sitecore\content\home\MyBucketItems"
+$startTime = $(get-date)
 
 $bulk = New-Object "Sitecore.Data.BulkUpdateContext"
 try {
