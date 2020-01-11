@@ -16,6 +16,7 @@
     * delete an unwanted item with its child items permanently;
     * delete child items under a specific path;
     * delete child items based on a specific data template;
+    * delete many bucket items;
     * move a certain item to another location;
   * Language
     * add a language version to child items;
