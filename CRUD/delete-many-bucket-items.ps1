@@ -10,4 +10,5 @@ try {
 finally {
 	$bulk.Dispose()
 	Write-Host "Finished"
+	$currentTime = $(get-date)
 }
