@@ -11,4 +11,5 @@ finally {
 	$bulk.Dispose()
 	Write-Host "Finished"
 	$currentTime = $(get-date)
+	$elapsedTime = new-timespan $startTime $currentTime
 }
