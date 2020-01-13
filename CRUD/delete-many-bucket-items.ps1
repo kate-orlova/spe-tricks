@@ -12,4 +12,5 @@ finally {
 	Write-Host "Finished"
 	$currentTime = $(get-date)
 	$elapsedTime = new-timespan $startTime $currentTime
+	Write-Host "Elapsed time: $($elapsedTime.ToString("hh\:mm\:ss"))"
 }
