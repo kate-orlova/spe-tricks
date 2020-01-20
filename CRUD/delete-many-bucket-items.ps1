@@ -5,6 +5,12 @@ $bulk = New-Object "Sitecore.Data.BulkUpdateContext"
 try {
 	$buckets = Get-ChildItem -Path $targetPath -Recurse
 	Write-Host "Deleteing $($buckets.Length) item(s) from '$($targetPath)'"
+	
+	$buckets | ForEach-Object {
+        $bucketItems = Get-ChildItem -Path $_.ItemPath
+        $bucketItems | Remove-Item
+    }
+	
 	$buckets | Remove-Item
 }
 finally {
