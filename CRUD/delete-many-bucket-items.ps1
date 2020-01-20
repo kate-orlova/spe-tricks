@@ -3,7 +3,7 @@ $startTime = $(get-date)
 
 $bulk = New-Object "Sitecore.Data.BulkUpdateContext"
 try {
-	$buckets = Get-ChildItem -Path $targetPath -Recurse
+	$buckets = Get-ChildItem -Path $targetPath -Recurse | Where-Object { $_.TemplateName -eq "Bucket" }
 	Write-Host "Deleteing $($buckets.Length) item(s) from '$($targetPath)'"
 	
 	$buckets | ForEach-Object {
