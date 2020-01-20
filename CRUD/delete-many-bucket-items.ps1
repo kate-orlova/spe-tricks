@@ -9,7 +9,8 @@ try {
 	$buckets | ForEach-Object {
         $bucketItems = Get-ChildItem -Path $_.ItemPath
         $bucketItems | Remove-Item
-    }
+		Write-Host "Bucket $($_.ItemPath) has been deleted"
+	}
 	
 	$buckets | Remove-Item
 }
