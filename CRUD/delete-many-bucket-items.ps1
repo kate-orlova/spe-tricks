@@ -7,7 +7,7 @@ try {
 	Write-Host "Deleteing $($buckets.Length) item(s) from '$($targetPath)'"
 	
 	$buckets | ForEach-Object {
-        $bucketItems = Get-ChildItem -Path $_.ItemPath
+        $bucketItems = Get-ChildItem -Path $_.ItemPath | Where-Object { $_.TemplateName -eq "Product" }
         $bucketItems | Remove-Item
 		Write-Host "Bucket $($_.ItemPath) has been deleted"
 	}
