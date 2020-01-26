@@ -6,10 +6,13 @@ try {
 	$buckets = Get-ChildItem -Path $targetPath -Recurse | Where-Object { $_.TemplateName -eq "Bucket" }
 	Write-Host "Deleteing $($buckets.Length) item(s) from '$($targetPath)'"
 	
+	$counter = 0;
 	$buckets | ForEach-Object {
         $bucketItems = Get-ChildItem -Path $_.ItemPath | Where-Object { $_.TemplateName -eq "Product" }
         $bucketItems | Remove-Item
+		$counter++
 		Write-Host "Bucket $($_.ItemPath) has been deleted"
+		Write-Host "Processed $($counter) of $($buckets.Length)"
 	}
 	
 	$buckets | Remove-Item
