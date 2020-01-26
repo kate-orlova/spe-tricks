@@ -16,6 +16,7 @@ try {
 		Write-Host "Processed $($counter) of $($buckets.Length)"
 	}
 	
+	Write-Host "Deleteing bucket items, might take some time"
 	$buckets | Remove-Item
 }
 finally {
