@@ -11,4 +11,8 @@ $systemDictionaryEntryTemplate = "master:/sitecore/templates/System/Dictionary/D
 
 $coloursDictionary = New-Item -Path $systemDictionaryPath -Name "Colours" -type $systemDictionaryFolderTemplate
 
+$colours | ForEach-Object {
+	$displayName = $_
+}
+
 Write-Host "Finished"
