@@ -13,6 +13,9 @@ $coloursDictionary = New-Item -Path $systemDictionaryPath -Name "Colours" -type 
 
 $colours | ForEach-Object {
 	$displayName = $_
+	$itemName = $_
+	
+	$dictionaryEntry = New-Item -Path $coloursDictionary.FullPath -Name $itemName -type $systemDictionaryEntryTemplate
 }
 
 Write-Host "Finished"
