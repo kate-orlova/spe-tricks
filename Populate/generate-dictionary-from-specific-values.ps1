@@ -16,6 +16,7 @@ $colours | ForEach-Object {
 	$itemName = $_
 	
 	$dictionaryEntry = New-Item -Path $coloursDictionary.FullPath -Name $itemName -type $systemDictionaryEntryTemplate
+	$dictionaryEntry.Editing.BeginEdit()
 }
 
 Write-Host "Finished"
