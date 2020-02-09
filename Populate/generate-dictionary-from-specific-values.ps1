@@ -21,6 +21,7 @@ $colours | ForEach-Object {
 	$dictionaryEntry["Key"] = $itemName
 	$dictionaryEntry["Phrase"] = $displayName
 	$dictionaryEntry.Editing.EndEdit()
+	Write-Host "Created '$itemName' dictionary item"
 }
 
 Write-Host "Finished"
