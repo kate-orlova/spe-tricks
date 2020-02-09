@@ -19,6 +19,7 @@ $colours | ForEach-Object {
 	$dictionaryEntry.Editing.BeginEdit()
 	$dictionaryEntry["__Display name"] = $displayName
 	$dictionaryEntry["Key"] = $itemName
+	$dictionaryEntry["Phrase"] = $displayName
 	$dictionaryEntry.Editing.EndEdit()
 }
 
