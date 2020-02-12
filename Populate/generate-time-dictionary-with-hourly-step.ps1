@@ -6,6 +6,8 @@ $hoursDictionary = New-Item -Path $systemDictionaryPath -Name "Hours" -type $sys
 
 $items = 0..24
 $items | ForEach-Object {
+	$step = $_
+	$time = [System.TimeSpan]::FromHours($step)
 }
 
 Write-Host "Finished"
