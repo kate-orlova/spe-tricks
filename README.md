@@ -23,6 +23,7 @@
     * add a language version based on a specific data template;
   * Populate
     * generate a dictionary from some values;
+    * generate a time dictionary with hourly step;
   * Publish
     * publish child items;
     * publish child items based on a specific data template name / Id;
