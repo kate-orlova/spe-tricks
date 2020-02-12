@@ -4,4 +4,8 @@ $systemDictionaryEntryTemplate = "master:/sitecore/templates/System/Dictionary/D
 
 $hoursDictionary = New-Item -Path $systemDictionaryPath -Name "Hours" -type $systemDictionaryFolderTemplate
 
+$items = 0..24
+$items | ForEach-Object {
+}
+
 Write-Host "Finished"
