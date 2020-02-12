@@ -8,6 +8,7 @@ $items = 0..24
 $items | ForEach-Object {
 	$step = $_
 	$time = [System.TimeSpan]::FromHours($step)
+	$dateTime = [System.DateTime]::Today + $time
 }
 
 Write-Host "Finished"
