@@ -9,6 +9,7 @@ $items | ForEach-Object {
 	$step = $_
 	$time = [System.TimeSpan]::FromHours($step)
 	$dateTime = [System.DateTime]::Today + $time
+	$timeStr = $dateTime.ToString("HH:mm")
 }
 
 Write-Host "Finished"
