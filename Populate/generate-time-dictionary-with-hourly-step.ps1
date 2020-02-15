@@ -11,6 +11,8 @@ $items | ForEach-Object {
 	$dateTime = [System.DateTime]::Today + $time
 	$timeStr = $dateTime.ToString("HH:mm")
 	$timeEntry = New-Item -Path $hoursDictionary.FullPath -Name $timeStr.Replace(":", "-") -type $systemDictionaryEntryTemplate
+	$timeEntry.Editing.BeginEdit()
+	$timeEntry.Editing.EndEdit()
 }
 
 Write-Host "Finished"
