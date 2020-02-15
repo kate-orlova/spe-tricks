@@ -10,6 +10,7 @@ $items | ForEach-Object {
 	$time = [System.TimeSpan]::FromHours($step)
 	$dateTime = [System.DateTime]::Today + $time
 	$timeStr = $dateTime.ToString("HH:mm")
+	$timeEntry = New-Item -Path $hoursDictionary.FullPath -Name $timeStr.Replace(":", "-") -type $systemDictionaryEntryTemplate
 }
 
 Write-Host "Finished"
