@@ -14,6 +14,7 @@ $items | ForEach-Object {
 	$timeEntry.Editing.BeginEdit()
 	$timeEntry["__Display name"] = $timeStr
 	$timeEntry["Key"] = $timeStr
+	$timeEntry["Phrase"] = $timeStr
 	$timeEntry.Editing.EndEdit()
 }
 
