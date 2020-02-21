@@ -16,6 +16,7 @@ $items | ForEach-Object {
 	$timeEntry["Key"] = $timeStr
 	$timeEntry["Phrase"] = $timeStr
 	$timeEntry.Editing.EndEdit()
+	Write-Host "Created '$timeStr' dictionary item"
 }
 
 Write-Host "Finished"
