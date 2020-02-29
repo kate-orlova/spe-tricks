@@ -18,6 +18,7 @@
     * delete child items based on a specific data template;
     * delete many bucket items;
     * move a certain item to another location;
+    * update a rendering value;
   * Language
     * add a language version to child items;
     * add a language version based on a specific data template;
