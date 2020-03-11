@@ -12,6 +12,9 @@ if ($items)
 	
 	$items | ForEach-Object {
 		Write-Host "Processing item $counter"
+		
+		$ren = $_ | Get-Rendering -Rendering $rendering -Placeholder "content-main" -Device (Get-LayoutDevice "Default") 
+		
 		$counter++
 	}
 	
