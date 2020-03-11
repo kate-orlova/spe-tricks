@@ -10,5 +10,10 @@ if ($items)
     Write-Host "'$($items.Length)' to be processed"
     $counter = 0
 	
+	$items | ForEach-Object {
+		Write-Host "Processing item $counter"
+		$counter++
+	}
+	
 	Write-Host "Finished"
 }
