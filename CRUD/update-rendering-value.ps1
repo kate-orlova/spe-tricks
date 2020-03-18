@@ -15,7 +15,8 @@ if ($items)
 		Write-Host "Processing item $counter"
 		
 		$itemRendering = $_ | Get-Rendering -Rendering $rendering -Placeholder "content-main" -Device (Get-LayoutDevice "Default")
-		$itemRendering.Datasource = $newRenderingValue		
+		$itemRendering.Datasource = $newRenderingValue
+		Set-Rendering -Item $_ -Instance $itemRendering
 		
 		$counter++
 	}
