@@ -2,5 +2,7 @@ $products = Get-ChildItem -Path "master:\sitecore\content\home\Products" -Recurs
 $productTypes = Get-ChildItem -Path "master:\sitecore\content\home\ProductTypes" -Recurse  | Where-Object { $_.TemplateName -eq "ProductType" }
 if ($products)
 {
+	Write-Host "Items to update: $($products.Length)"
+	
 	Write-Host "Finished"
 }
