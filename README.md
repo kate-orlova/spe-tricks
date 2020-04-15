@@ -19,6 +19,7 @@
     * delete many bucket items;
     * move a certain item to another location;
     * update a rendering value;
+    * convert a Droplist plain text value to a Droplink reference (Sitecore Item Id);
   * Language
     * add a language version to child items;
     * add a language version based on a specific data template;
