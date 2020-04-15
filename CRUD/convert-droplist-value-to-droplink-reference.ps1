@@ -4,5 +4,13 @@ if ($products)
 {
 	Write-Host "Items to update: $($products.Length)"
 	
+	$counter = 0
+	$products | ForEach-Object {
+		$product = $_
+	
+		$counter++
+		Write-Host "Processed $($counter) out of $($products.Length)"
+	}
+	
 	Write-Host "Finished"
 }
