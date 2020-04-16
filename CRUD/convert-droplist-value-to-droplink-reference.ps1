@@ -13,6 +13,7 @@ if ($products)
 		if ($productTypeItem) {
 			$productTypeId = $productTypeItem.ID
 			$product.Editing.BeginEdit()
+			$product["ProductType"] = $productTypeId
 		}
 	
 		$counter++
