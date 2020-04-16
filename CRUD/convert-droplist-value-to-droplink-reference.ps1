@@ -7,6 +7,7 @@ if ($products)
 	$counter = 0
 	$products | ForEach-Object {
 		$product = $_
+		$strProductType = $product["ProductType"]
 	
 		$counter++
 		Write-Host "Processed $($counter) out of $($products.Length)"
