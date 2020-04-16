@@ -8,7 +8,10 @@ if ($products)
 	$products | ForEach-Object {
 		$product = $_
 		$strProductType = $product["ProductType"]
+		
 		$productTypeItem = $productTypes | Where-Object { $_.Name -eq $strProductType -or $_.DisplayName -eq $strProductType }
+		if ($productTypeItem) {
+		}
 	
 		$counter++
 		Write-Host "Processed $($counter) out of $($products.Length)"
