@@ -11,6 +11,7 @@ if ($products)
 		
 		$productTypeItem = $productTypes | Where-Object { $_.Name -eq $strProductType -or $_.DisplayName -eq $strProductType }
 		if ($productTypeItem) {
+			$productTypeId = $productTypeItem.ID
 		}
 	
 		$counter++
