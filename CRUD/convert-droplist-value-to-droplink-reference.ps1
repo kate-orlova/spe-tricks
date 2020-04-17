@@ -20,7 +20,7 @@ if ($products)
 		}
 	
 		$counter++
-		Write-Host "Processed $($counter) out of $($products.Length)"
+		Write-Host "Processed $($counter) out of $($products.Length) and converted $($converted) items"
 	}
 	
 	Write-Host "Finished"
