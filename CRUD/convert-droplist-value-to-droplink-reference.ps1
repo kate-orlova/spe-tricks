@@ -12,6 +12,7 @@ if ($products)
 		
 		$productTypeItem = $productTypes | Where-Object { $_.Name -eq $strProductType -or $_.DisplayName -eq $strProductType }
 		if ($productTypeItem) {
+			$converted++
 			$productTypeId = $productTypeItem.ID
 			$product.Editing.BeginEdit()
 			$product["ProductType"] = $productTypeId
