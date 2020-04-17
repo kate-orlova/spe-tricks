@@ -5,6 +5,7 @@ if ($products)
 	Write-Host "Items to update: $($products.Length)"
 	
 	$counter = 0
+	$converted = 0
 	$products | ForEach-Object {
 		$product = $_
 		$strProductType = $product["ProductType"]
