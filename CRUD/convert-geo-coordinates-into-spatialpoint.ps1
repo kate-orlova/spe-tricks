@@ -5,5 +5,9 @@ if ($places)
 {
 	Write-Host "Items to update: $($places.Length)"
 	
+	$counter = 0
+	$places | ForEach-Object {	
+	}
+	
 	Write-Host "Finished"
 }
