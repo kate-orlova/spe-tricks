@@ -6,7 +6,11 @@ if ($places)
 	Write-Host "Items to update: $($places.Length)"
 	
 	$counter = 0
-	$places | ForEach-Object {	
+	$places | ForEach-Object {
+		$places = $_
+		
+		$counter++
+		Write-Host "Processed $($counter) items out of $($places.Length)"
 	}
 	
 	Write-Host "Finished"
