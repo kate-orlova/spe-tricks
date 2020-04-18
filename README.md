@@ -8,7 +8,7 @@
  Sitecore PowerShell Extensions (SPE) tricks are a set of useful PowerShell scripts everyone working with Sitecore should have at hand.
  Scripts are grouped into folders based on the specific functionality:
  * CRUD
-    * convert items from one data template to another;
+    * convert items from one data template into another;
     * copy child items to a certain folder;
     * copy child items based on a specific data template to a certain folder;
     * copy a certain item to a new destination;
@@ -19,7 +19,8 @@
     * delete many bucket items;
     * move a certain item to another location;
     * update a rendering value;
-    * convert a Droplist plain text value to a Droplink reference (Sitecore Item Id);
+    * convert a Droplist plain text value into a Droplink reference (Sitecore Item Id);
+    * convert GEO coordinates - Latitude and Longitude, into SpatialPoint;
   * Language
     * add a language version to child items;
     * add a language version based on a specific data template;
