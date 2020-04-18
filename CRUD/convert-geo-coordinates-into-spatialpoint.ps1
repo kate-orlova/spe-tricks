@@ -7,7 +7,9 @@ if ($places)
 	
 	$counter = 0
 	$places | ForEach-Object {
-		$places = $_
+		$place = $_
+		$latitude = $place["Latitude"]
+		$longitude = $place["Longitude"]
 		
 		$counter++
 		Write-Host "Processed $($counter) items out of $($places.Length)"
