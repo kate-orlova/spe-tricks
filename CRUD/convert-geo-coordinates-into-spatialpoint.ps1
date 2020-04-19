@@ -11,6 +11,7 @@ if ($places)
 		$latitude = $place["Latitude"]
 		$longitude = $place["Longitude"]
 		$coordinates = $latitude + ',' + $longitude
+		$spatialPoint = New-Object -TypeName Sitecore.ContentSearch.Spatial.DataTypes.SpatialPoint -ArgumentList $coordinates
 		$place.Editing.BeginEdit()		
 		
 		$counter++
