@@ -10,6 +10,7 @@ if ($places)
 		$place = $_
 		$latitude = $place["Latitude"]
 		$longitude = $place["Longitude"]
+		$place.Editing.BeginEdit()
 		
 		$counter++
 		Write-Host "Processed $($counter) items out of $($places.Length)"
