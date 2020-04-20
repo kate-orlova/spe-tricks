@@ -17,7 +17,7 @@ if ($places)
 		$place.Editing.EndEdit()		
 		
 		$counter++
-		Write-Host "Processed $($counter) items out of $($places.Length)"
+		Write-Host "Processed $($counter) item out of $($places.Length) with $($spatialPoint.Lat), $($spatialPoint.Lon) coordinates"
 	}
 	
 	Write-Host "Finished"
