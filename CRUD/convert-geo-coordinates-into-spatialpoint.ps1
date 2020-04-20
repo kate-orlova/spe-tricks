@@ -12,7 +12,8 @@ if ($places)
 		$longitude = $place["Longitude"]
 		$coordinates = $latitude + ',' + $longitude
 		$spatialPoint = New-Object -TypeName Sitecore.ContentSearch.Spatial.DataTypes.SpatialPoint -ArgumentList $coordinates
-		$place.Editing.BeginEdit()		
+		$place.Editing.BeginEdit()
+		$place["Coordinates"] = $spatialPoint.ToString()		
 		
 		$counter++
 		Write-Host "Processed $($counter) items out of $($places.Length)"
