@@ -1,3 +1,5 @@
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/kate-orlova/spe-tricks)
+[![GitHub release](https://img.shields.io/github/release-date/kate-orlova/spe-tricks.svg?style=flat)](https://github.com/kate-orlova/spe-tricks/releases/tag/v1.0)
 [![GitHub license](https://img.shields.io/github/license/kate-orlova/spe-tricks.svg)](https://github.com/kate-orlova/spe-tricks/blob/master/LICENSE)
 ![GitHub language count](https://img.shields.io/github/languages/count/kate-orlova/spe-tricks.svg?style=flat)
 ![GitHub top language](https://img.shields.io/github/languages/top/kate-orlova/spe-tricks.svg?style=flat)
