@@ -21,6 +21,7 @@
     * delete many bucket items;
     * move a certain item to another location;
     * update a rendering value;
+    * remove all HTML formatting from a string value;
     * convert a Droplist plain text value into a Droplink reference (Sitecore Item Id);
     * convert GEO coordinates - Latitude and Longitude, into SpatialPoint;
   * Language
