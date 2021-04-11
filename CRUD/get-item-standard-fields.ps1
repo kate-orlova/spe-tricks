@@ -1,0 +1,2 @@
+$sourcePath = "master:\sitecore\content\home"
+Get-Item $sourcePath | Get-ItemField -IncludeStandardFields -ReturnType Field -Name "*" | ft Name, DisplayName, SectionDisplayName, Description, Value -auto
