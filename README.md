@@ -28,6 +28,7 @@
     * get a publishability setting for an item version;
     * get standard fields for an item;
     * get non standard fields for an item;
+    * get the latest version of a certain item;
   * Language
     * add a language version to child items;
     * add a language version based on a specific data template;
