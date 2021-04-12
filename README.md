@@ -25,6 +25,9 @@
     * convert a Droplist plain text value into a Droplink reference (Sitecore Item Id);
     * convert GEO coordinates - Latitude and Longitude, into SpatialPoint;
     * get links `<a href="xxx" />` from an HTML document;
+    * get a publishability setting for an item version;
+    * get standard fields for an item;
+    * get non standard fields for an item;
   * Language
     * add a language version to child items;
     * add a language version based on a specific data template;
