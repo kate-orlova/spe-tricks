@@ -11,7 +11,7 @@ if ($items)
 	
 	$items | ForEach-Object {
 		Write-Host "Processing item $counter"
-		
+		$item = $_
 		
 		$counter++
 	}
