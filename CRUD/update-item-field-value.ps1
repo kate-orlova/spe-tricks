@@ -12,6 +12,8 @@ if ($items)
 	$items | ForEach-Object {
 		Write-Host "Processing item $counter"
 		$item = $_
+		$item.Editing.BeginEdit()
+		$item.Editing.EndEdit()
 		
 		$counter++
 	}
