@@ -13,6 +13,7 @@ if ($items)
 		Write-Host "Processing item $counter"
 		$item = $_
 		$item.Editing.BeginEdit()
+		$item["SomeField"] = $newFieldValue
 		$item.Editing.EndEdit()
 		
 		$counter++
