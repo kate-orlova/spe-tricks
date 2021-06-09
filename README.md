@@ -27,8 +27,7 @@
     * convert GEO coordinates - Latitude and Longitude, into SpatialPoint;
     * get links `<a href="xxx" />` from an HTML document;
     * get a publishability setting for an item version;
-    * get standard fields for an item;
-    * get non standard fields for an item;
+    * get standard and / or non standard fields for an item;
     * get the latest version of a certain item;
   * Language
     * add a language version to child items;
