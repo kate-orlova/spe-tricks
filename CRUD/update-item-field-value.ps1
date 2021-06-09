@@ -15,7 +15,7 @@ if ($items)
 		$item.Editing.BeginEdit()
 		$item["SomeField"] = $newFieldValue
 		$item.Editing.EndEdit()
-		
+		Write-Host "Processed item $counter"
 		$counter++
 	}
 	
