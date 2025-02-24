@@ -11,6 +11,8 @@
  Scripts are grouped into folders based on the specific functionality:
  * Admin
     * restart Sitecore's application pool
+    * see what ports are used
+    * find out what processes are listening a given port
  * CRUD
     * convert items from one data template into another;
     * copy child items to a certain folder;
