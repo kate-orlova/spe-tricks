@@ -37,6 +37,8 @@
   * Language
     * add a language version to child items;
     * add a language version based on a specific data template;
+  * PDF
+    * convert a selection of web URLs to PDF using Chrome command with “headless” & “print-to-pdf” arguments
   * Populate
     * generate a dictionary from some values;
     * generate a time dictionary with a half-hour / hour step;
