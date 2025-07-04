@@ -39,6 +39,7 @@
     * add a language version based on a specific data template;
   * PDF
     * convert a web URL or a selection of web URLs to PDF using Chrome command with “headless” & “print-to-pdf” arguments
+    * please note that the script does not handle cookie consent
   * Populate
     * generate a dictionary from some values;
     * generate a time dictionary with a half-hour / hour step;
