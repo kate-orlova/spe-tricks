@@ -13,6 +13,7 @@
     * restart Sitecore's application pool
     * see what ports are used
     * find out what processes are listening a given port
+    * clean up the unused `Data` folders
  * CRUD
     * convert items from one data template into another;
     * copy child items to a certain folder;
