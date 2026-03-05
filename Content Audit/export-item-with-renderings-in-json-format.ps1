@@ -1,0 +1,85 @@
+# ===== PARAMS =====
+$database = "master"
+$itemPath = "YOUR ITEM PATH"
+
+$item = Get-Item ($database + ":" + $itemPath)
+
+if (-not $item) {
+    throw "Item not found: $itemPath"
+}
+
+$item = $item.Versions.GetLatestVersion()
+
+# ===== BUILD JSON OBJECT =====
+$data = [PSCustomObject]@{
+    Id        = $item.ID.ToString()
+    Name      = $item.Name
+    Path      = $item.Paths.FullPath
+    Template  = $item.TemplateName
+    Language  = $item.Language.Name
+    Version   = $item.Version.Number
+    Fields    = @{}
+    Renderings = @{}
+}
+
+# ===== ITEM FIELDS =====
+foreach ($field in $item.Fields) {
+    if (-not $field.Name.StartsWith("__")) {
+        $data.Fields[$field.Name] = $field.Value
+    }
+}
+
+# ===== GET RENDERINGS =====
+$device = Get-LayoutDevice "Default"
+$renderings = Get-Rendering -Item $item -Device $device -FinalLayout
+
+foreach ($rendering in $renderings) {
+
+    if ($rendering.ItemID -eq $null) { continue }
+
+    $renderingItem = Get-Item -Path ($database + ":") -ID $rendering.ItemID
+
+    # ===== DATASOURCE DATA =====
+    $datasourceData = $null
+
+    if (![string]::IsNullOrEmpty($rendering.Datasource)) {
+
+        $datasourceItem = Get-Item ($database + ":" + $rendering.Datasource)
+
+        if ($datasourceItem) {
+
+            $datasourceFields = @{}
+
+            foreach ($field in $datasourceItem.Fields) {
+                if (-not $field.Name.StartsWith("__")) {
+                    $datasourceFields[$field.Name] = $field.Value
+                }
+            }
+
+            $datasourceData = @{
+                Id        = $datasourceItem.ID.ToString()
+                Name      = $datasourceItem.Name
+                Path      = $datasourceItem.Paths.FullPath
+                Template  = $datasourceItem.TemplateName
+                Fields    = $datasourceFields
+            }
+        }
+    }
+
+    # ===== RENDERING OBJECT =====
+    $data.Renderings[$rendering.UniqueId] = @{
+        UniqueId                = $rendering.UniqueId
+        ItemId                  = $rendering.ItemID
+        OwnerItemId             = $rendering.OwnerItemId
+        RenderingName           = $renderingItem.Name
+        RenderingTemplateName   = $renderingItem.TemplateName
+        Placeholder             = $rendering.Placeholder
+        Parameters              = $rendering.Parameters
+        Datasource              = $rendering.Datasource
+        DatasourceItem          = $datasourceData
+    }
+}
+
+# ===== EXPORT =====
+$json = $data | ConvertTo-Json -Depth 20
+$json | Out-Download -Name ("item " + $item.ID + ".json") -ContentType "application/json"
