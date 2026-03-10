@@ -19,14 +19,17 @@ $data = [PSCustomObject]@{
     Language  = $item.Language.Name
     Version   = $item.Version.Number
     Fields    = @{}
-    Renderings = @{}
+	SystemFields = @{}
+    Renderings = @()
 }
 
 # ===== ITEM FIELDS =====
 foreach ($field in $item.Fields) {
     if (-not $field.Name.StartsWith("__")) {
         $data.Fields[$field.Name] = $field.Value
-    }
+    } else {
+		$data.SystemFields[$field.Name] = $field.Value
+	}
 }
 
 # ===== GET RENDERINGS =====
@@ -66,8 +69,8 @@ foreach ($rendering in $renderings) {
         }
     }
 
-    # ===== RENDERING OBJECT =====
-    $data.Renderings[$rendering.UniqueId] = @{
+# ===== RENDERING OBJECT =====
+    $renderingObject = @{
         UniqueId                = $rendering.UniqueId
         ItemId                  = $rendering.ItemID
         OwnerItemId             = $rendering.OwnerItemId
@@ -78,6 +81,9 @@ foreach ($rendering in $renderings) {
         Datasource              = $rendering.Datasource
         DatasourceItem          = $datasourceData
     }
+
+    # ADD TO ARRAY PRESERVING ORDER
+    $data.Renderings += $renderingObject
 }
 
 # ===== EXPORT =====
