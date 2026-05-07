@@ -35,6 +35,9 @@
     * get standard and / or non standard fields for an item;
     * get the latest version of a certain item;
     * refresh `license.xml` file across all sites
+ * Content Audit
+    * `get-item-count-based-on-template-id.ps1` and `get-item-count-based-on-template-path.ps1` - get total number of items based on a certain template by its id/path;
+    * `get-language-variant-count.ps1` – analysis of the existing language variants for items by a root path;
   * Language
     * add a language version to child items;
     * add a language version based on a specific data template;
