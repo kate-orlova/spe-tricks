@@ -36,14 +36,21 @@
     * get the latest version of a certain item;
     * refresh `license.xml` file across all sites
  * Content Audit
+    * `export-assets-by-path.ps1` – extract assets from a source path into a local folder as a pair consisting of 1) asset metadata in JSON format and 2) blob content saved with its original file name;
+    * `export-item-in-json-format.ps1` – export the latest version of an item with custom fields by its path in JSON format;
+    * `export-item-with-renderings-in-json-format.ps1` - export the latest version of an item with custom and system  fields, and renderings by its path in JSON format;
+    * `get-all-item-renderings.ps1` – count and extract all renderings from the final layout for items within a given root path;
+    * `get-item-count-based-on-rendering-id.ps1` – count the number of items using a concerned rendering based on its id without double counting when the same rendering is added multiple times;
     * `get-item-count-based-on-template-id.ps1` and `get-item-count-based-on-template-path.ps1` - get total number of items based on a certain template by its id/path;
+    * `get-items-in-all-lng-with-system-fields-and-renderings-json.ps1` – extract items in JSON format by a given template in all languages;
+    * `get-items-with-system-fields-and-renderings-json-lng.ps1` - extract items in JSON format based on a certain template in a specific language;
     * `get-language-variant-count.ps1` – analysis of the existing language variants for items by a root path;
   * Language
     * add a language version to child items;
     * add a language version based on a specific data template;
   * PDF
-    * convert a web URL or a selection of web URLs to PDF using Chrome command with “headless” & “print-to-pdf” arguments
-    * please note that the script does not handle cookie consent
+    * convert a web URL or a selection of web URLs to PDF using Chrome command with “headless” & “print-to-pdf” arguments;
+    * please note that the script does not handle cookie consent;
   * Populate
     * generate a dictionary from some values;
     * generate a time dictionary with a half-hour / hour step;
