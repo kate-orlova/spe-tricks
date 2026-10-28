@@ -46,6 +46,7 @@
     * `get-items-with-system-fields-and-renderings-json-lng.ps1` - extract items in JSON format based on a certain template in a specific language;
     * `get-language-variant-count.ps1` – analysis of the existing language variants for items by a root path;
     * `get-language-fallback-fields.ps1` - extract fields marked as shared language fallback for a given data template;
+    * `get-items-in-all-lng-with-EN-lng-fallback-fields.ps1` - extract items in all languages with the English language fallback for empty fields without non-English values;
   * Language
     * add a language version to child items;
     * add a language version based on a specific data template;
